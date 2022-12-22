@@ -8,14 +8,12 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/clarkezone/gomicroservicestarter/internal"
 	"github.com/clarkezone/gomicroservicestarter/pkg/config"
 	clarkezoneLog "github.com/clarkezone/gomicroservicestarter/pkg/log"
 )
 
 // TestMain initizlie all tests
 func TestMain(m *testing.M) {
-	internal.SetupGitRoot()
 	clarkezoneLog.Init(logrus.DebugLevel)
 	code := m.Run()
 	os.Exit(code)
