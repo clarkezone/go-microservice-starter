@@ -1,3 +1,5 @@
+// TODO THIS file is dead
+
 package internal
 
 import (
@@ -16,18 +18,6 @@ const (
 	//nolint
 	testsecureclonepwname = "TEST_GITLAYER_SECURECLONEPWNAME"
 )
-
-// configure environment variables by:
-// 1. command palette: open settings (json)
-// 2. append the following
-// "go.testEnvFile": "/home/james/.previewd_test.env",
-// 3. contents of file
-// TEST_GITLAYER_REPO_NOAUTHURL="https:/"
-// TEST_GITLAYER_LOCALDIR=""
-// TEST_GITLAYER_BRANCHSWITCH=""
-// TEST_GITLAYER_SECURE_REPO_NOAUTH=""
-// TEST_GITLAYER_SECURECLONEPW=""
-// TEST_GITLAYER_TESTLOCALK8S=""
 
 // Getenv returns environment variables for use in tests
 func Getenv(t *testing.T) (string, string, string, string, string) {

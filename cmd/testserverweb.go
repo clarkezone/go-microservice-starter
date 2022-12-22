@@ -1,4 +1,4 @@
-// Package cmd contains the cli command definitions for previewd:w
+// Package cmd contains the cli command definitions for gomicroservicestarter
 package cmd
 
 /*
@@ -36,7 +36,7 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			clarkezoneLog.Successf("previewd version %v,%v started in testserver mode\n",
+			clarkezoneLog.Successf("gomicroservicestarter version %v,%v started in testserver mode\n",
 				config.VersionString, config.VersionHash)
 			clarkezoneLog.Successf("Log level set to %v", internal.LogLevel)
 			mux := basicserver.DefaultMux()

@@ -1,4 +1,4 @@
-// Package cmd contains the cli command definitions for previewd:w
+// Package cmd contains the cli command definitions for gomicroservicestarter
 package cmd
 
 /*
