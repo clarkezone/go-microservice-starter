@@ -1,4 +1,4 @@
-BIN_NAME := "pocketshorten"
+BIN_NAME := "go-microservice-starter"
 MAIN_BRANCH := main
 HEAD_BRANCH := HEAD
 ifeq ($(strip $(VERSION_HASH)),)
@@ -88,7 +88,7 @@ buildproto:
 
 .PHONY: buildimage
 buildimage:
-	$(eval IMG := "pocketshorten")
+	$(eval IMG := "go-microservice-starter")
 	$(eval VERSION := "latest")
 
 	@echo ${IMG}
