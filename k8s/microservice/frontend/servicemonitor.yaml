@@ -7,8 +7,8 @@ metadata:
     name: gomicroservicestarter-servicemonitor-fe
 spec:
   selector:
-#    matchLabels:
-#      app: gomicroservicestarter-fe
+    #    matchLabels:
+    #      app: gomicroservicestarter-fe
     matchExpressions:
       - { key: app, operator: In, values: [gomicroservicestarter-fe] }
   #      - {key: app, operator: In, values: [gomicroservicestarter-fe,gomicroservicestarter-be]}

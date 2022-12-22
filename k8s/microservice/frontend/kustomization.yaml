@@ -17,5 +17,5 @@ configMapGenerator:
     literals:
       - URL=http://gomicroservicestarter-service:8080
       - LOGLEVEL=debug
-# - SERVICEURL=10.42.1.232:8090
+      # - SERVICEURL=10.42.1.232:8090
       - SERVICEURL=gomicroservicestarter-service-backend.go-microservice-starter.svc.cluster.local:8090
