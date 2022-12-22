@@ -45,7 +45,8 @@ func (bs *BasicServerGrpc) StartListen(secret string) *grpc.Server {
 	}
 
 	bs.lis = &lis
-	mid := NewPromMetricsMiddlewareGrpc("basicserver")
+	// TODO: move this out into testservergrpc
+	mid := NewPromMetricsMiddlewareGrpc("gomicroservicestarterer_grpc")
 	opts := []grpc.ServerOption{grpc.ChainUnaryInterceptor(
 		(bs.logsUnaryInterceptor),
 		(mid.metricsUnaryInterceptor))}
