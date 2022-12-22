@@ -1,13 +1,13 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: pocketshorten-real
+namespace: gomicroservicestarter-real
 commonLabels:
-  app: pocketshorten-be
+  app: gomicroservicestarter-be
 resources:
   - deployment.yaml
   - service.yaml
 configMapGenerator:
   - name: config-backend
     literals:
-      - URL=http://pb-service:8080
+      # - URL=http://pb-service:8080
       - LOGLEVEL=debug

@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pocketshorten-frontend
+  name: gomicroservicestarter-frontend
   labels:
     app: kustomize
 spec:
@@ -14,10 +14,10 @@ spec:
         app: kustomize
     spec:
       containers:
-        - name: pocketshorten-frontend
+        - name: gomicroservicestarter-frontend
           # image: registry.dev.clarkezone.dev/pocketgeotemp:latest
           image:
-            registry.hub.docker.com/clarkezone/pocketshorten:main
+            registry.hub.docker.com/clarkezone/go-microservice-starter:main
             #        image: registry.hub.docker.com/clarkezone/previewd:webhooke2e
           args: ["testserverweb"]
           imagePullPolicy: Always
@@ -35,18 +35,18 @@ spec:
                 configMapKeyRef:
                   name: config-frontend
                   key: SERVICEURL
-            - name: POCKET_SHORTEN_USERNAME
-              valueFrom:
-                secretKeyRef:
-                  name: db-user
-                  key: PW
-            - name: POCKET_DB_URL
-              valueFrom:
-                configMapKeyRef:
-                  name: config-frontend
-                  key: URL
-            - name: POCKET_SHORTEN_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: db-user
-                  key: PW
+                    #            - name: POCKET_SHORTEN_USERNAME
+                    #              valueFrom:
+                    #                secretKeyRef:
+                    #                  name: db-user
+                    #                  key: PW
+                    #            - name: POCKET_DB_URL
+                    #              valueFrom:
+                    #                configMapKeyRef:
+                    #                  name: config-frontend
+                    #                  key: URL
+                    #            - name: POCKET_SHORTEN_PASSWORD
+                    #              valueFrom:
+                    #                secretKeyRef:
+                    #                  name: db-user
+                    #                  key: PW
