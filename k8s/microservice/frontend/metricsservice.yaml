@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: gomicroservicestarter-metrics-service
+  name: gomicroservicestarter-metrics-service-fe
 spec:
   selector:
     app: kustomize
