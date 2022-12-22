@@ -41,7 +41,7 @@ to quickly create a Cobra application.`,
 				config.VersionString, config.VersionHash)
 			clarkezoneLog.Successf("Log level set to %v", internal.LogLevel)
 
-			tsGrpc.mid = basicserver.NewPromMetricsMiddlewareGrpc("gomicroservicestarterer_grpc")
+			tsGrpc.mid = basicserver.NewPromMetricsMiddlewareGrpc("gomicroservicestarter_grpc_server")
 			bsGrpc.AddUnaryInterceptor(tsGrpc.mid.MetricsUnaryInterceptor)
 			clarkezoneLog.Successf("Starting grpc server on port %v", internal.Port)
 			bsGrpc.StartMetrics()
