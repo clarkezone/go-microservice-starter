@@ -11,11 +11,11 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/clarkezone/pocketshorten/internal"
-	"github.com/clarkezone/pocketshorten/pkg/basicserver"
-	"github.com/clarkezone/pocketshorten/pkg/config"
-	"github.com/clarkezone/pocketshorten/pkg/greetingservice"
-	clarkezoneLog "github.com/clarkezone/pocketshorten/pkg/log"
+	"github.com/clarkezone/gomicroservicestarter/internal"
+	"github.com/clarkezone/gomicroservicestarter/pkg/basicserver"
+	"github.com/clarkezone/gomicroservicestarter/pkg/config"
+	"github.com/clarkezone/gomicroservicestarter/pkg/greetingservice"
+	clarkezoneLog "github.com/clarkezone/gomicroservicestarter/pkg/log"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"google.golang.org/grpc"
@@ -44,7 +44,7 @@ to quickly create a Cobra application.`,
 
 			var wrappedmux http.Handler
 			wrappedmux = basicserver.NewLoggingMiddleware(mux)
-			wrappedmux = basicserver.NewPromMetricsMiddlewareWeb("pocketshortener_testWebservice", wrappedmux)
+			wrappedmux = basicserver.NewPromMetricsMiddlewareWeb("gomicroservicestarterer_testWebservice", wrappedmux)
 
 			if viper.GetString(internal.ServiceURLVar) != "" {
 				clarkezoneLog.Successf("Delegating to %v", internal.ServiceURL)

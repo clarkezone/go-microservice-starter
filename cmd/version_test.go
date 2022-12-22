@@ -8,9 +8,9 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/clarkezone/pocketshorten/internal"
-	"github.com/clarkezone/pocketshorten/pkg/config"
-	clarkezoneLog "github.com/clarkezone/pocketshorten/pkg/log"
+	"github.com/clarkezone/gomicroservicestarter/internal"
+	"github.com/clarkezone/gomicroservicestarter/pkg/config"
+	clarkezoneLog "github.com/clarkezone/gomicroservicestarter/pkg/log"
 )
 
 // TestMain initizlie all tests
@@ -35,7 +35,7 @@ func Test_ExecuteVersion(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	expected := "pocketshorten version:1 hash:A\n"
+	expected := "gomicroservicestarter version:1 hash:A\n"
 	if string(out) != expected {
 		t.Fatalf("expected \"%s\" got \"%s\"", expected, string(out))
 	}

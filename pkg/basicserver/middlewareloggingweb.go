@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"time"
 
-	clarkezoneLog "github.com/clarkezone/pocketshorten/pkg/log"
+	clarkezoneLog "github.com/clarkezone/gomicroservicestarter/pkg/log"
 )
 
 // LoggingMiddlewareWeb adds logging functionality

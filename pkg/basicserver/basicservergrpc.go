@@ -7,11 +7,11 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/clarkezone/pocketshorten/internal"
+	"github.com/clarkezone/gomicroservicestarter/internal"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"google.golang.org/grpc"
 
-	clarkezoneLog "github.com/clarkezone/pocketshorten/pkg/log"
+	clarkezoneLog "github.com/clarkezone/gomicroservicestarter/pkg/log"
 )
 
 // type cleanupfunc func()

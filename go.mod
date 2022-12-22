@@ -1,4 +1,4 @@
-module github.com/clarkezone/pocketshorten
+module github.com/clarkezone/gomicroservicestarter
 
 go 1.19
 

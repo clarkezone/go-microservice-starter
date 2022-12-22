@@ -4,8 +4,8 @@ Copyright © 2022 clarkezone
 package main
 
 import (
-	"github.com/clarkezone/pocketshorten/cmd"
-	clarkezoneLog "github.com/clarkezone/pocketshorten/pkg/log"
+	"github.com/clarkezone/gomicroservicestarter/cmd"
+	clarkezoneLog "github.com/clarkezone/gomicroservicestarter/pkg/log"
 	"github.com/sirupsen/logrus"
 )
 

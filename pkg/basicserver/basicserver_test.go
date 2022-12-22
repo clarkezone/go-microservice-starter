@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	clarkezoneLog "github.com/clarkezone/pocketshorten/pkg/log"
+	clarkezoneLog "github.com/clarkezone/gomicroservicestarter/pkg/log"
 	"github.com/sirupsen/logrus"
 )
 

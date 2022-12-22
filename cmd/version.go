@@ -3,7 +3,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/clarkezone/pocketshorten/pkg/config"
+	"github.com/clarkezone/gomicroservicestarter/pkg/config"
 	"github.com/spf13/cobra"
 )
 
@@ -17,9 +17,9 @@ func init() {
 func getVersionCommand() *cobra.Command {
 	return &cobra.Command{
 		Use:   "version",
-		Short: "Show pocketshorten version",
+		Short: "Show gomicroservicestarter version",
 		RunE: func(cmd *cobra.Command, args []string) error {
-			_, err := fmt.Fprintf(cmd.OutOrStdout(), "pocketshorten version:%s hash:%s\n", config.VersionString, config.VersionHash)
+			_, err := fmt.Fprintf(cmd.OutOrStdout(), "gomicroservicestarter version:%s hash:%s\n", config.VersionString, config.VersionHash)
 			if err != nil {
 				return err
 			}

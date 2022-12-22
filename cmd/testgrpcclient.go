@@ -9,10 +9,10 @@ Copyright © 2022 NAME HERE <EMAIL ADDRESS>
 import (
 	"context"
 
-	"github.com/clarkezone/pocketshorten/internal"
-	"github.com/clarkezone/pocketshorten/pkg/config"
-	"github.com/clarkezone/pocketshorten/pkg/greetingservice"
-	clarkezoneLog "github.com/clarkezone/pocketshorten/pkg/log"
+	"github.com/clarkezone/gomicroservicestarter/internal"
+	"github.com/clarkezone/gomicroservicestarter/pkg/config"
+	"github.com/clarkezone/gomicroservicestarter/pkg/greetingservice"
+	clarkezoneLog "github.com/clarkezone/gomicroservicestarter/pkg/log"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 	"google.golang.org/grpc"
@@ -30,7 +30,7 @@ func newTestClientGrpcCmd(partent *cobra.Command) (*TestClientGrpcCmd, error) {
 		Long: `Starts a client that will call the testservergrpc which must be running
 have already been started with the testservergrpc command`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			clarkezoneLog.Successf("pocketshorten version %v,%v started in testclientgrpc mode\n",
+			clarkezoneLog.Successf("gomicroservicestarter version %v,%v started in testclientgrpc mode\n",
 				config.VersionString, config.VersionHash)
 			clarkezoneLog.Successf("Log level set to %v", internal.LogLevel)
 

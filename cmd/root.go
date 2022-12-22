@@ -9,8 +9,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/clarkezone/pocketshorten/internal"
-	clarkezoneLog "github.com/clarkezone/pocketshorten/pkg/log"
+	"github.com/clarkezone/gomicroservicestarter/internal"
+	clarkezoneLog "github.com/clarkezone/gomicroservicestarter/pkg/log"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -22,9 +22,9 @@ var (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "pocketshorten",
-	Short: "pocketshorten is a URL shortener.",
-	Long: `pocketshorten is a URL shortener based on the pocketbase backend.
+	Use:   "gomicroservicestarter",
+	Short: "gomicroservicestarter is a URL shortener.",
+	Long: `gomicroservicestarter is a URL shortener based on the pocketbase backend.
 
 To install the completion script on zsh,
 ensure that .zshrc contains:
@@ -32,7 +32,7 @@ ensure that .zshrc contains:
   compinit -i
 
 Then run the following:
-  sudo -- sh -c 'pocketshorten completion zsh > /usr/local/share/zsh/site-functions/_pocketshorten'
+  sudo -- sh -c 'gomicroservicestarter completion zsh > /usr/local/share/zsh/site-functions/_gomicroservicestarter'
 
 to quickly create a Cobra application.`,
 	// Uncomment the following line if your bare application
@@ -65,7 +65,7 @@ func init() {
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
 
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.pocketshorten.yaml)")
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.gomicroservicestarter.yaml)")
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
