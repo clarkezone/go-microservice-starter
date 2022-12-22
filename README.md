@@ -12,11 +12,11 @@
 
 Bootstrapping infra:
 
-- [ ] verify microservice mode locally and add commands to test to readme
+- [x] update k8s files to point to correct image
 - [ ] create 0.0.1 release
-- [ ] update k8s files to point to correct image
-- [ ] update loadtester
 - [ ] Dashboard for telemetry verified with loadtester
+- [ ] update loadtester
+- [ ] verify microservice mode locally and add commands to test to readme
 - [ ] k8s local override with staging / prod
 - [ ] Instructions for prerequs
 - [ ] Turn on PR enforcement, protect main branch
