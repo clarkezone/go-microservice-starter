@@ -17,7 +17,7 @@ spec:
         - name: gomicroservicestarter-backend
           # image: registry.dev.clarkezone.dev/pocketgeotemp:latest
           image:
-            registry.hub.docker.com/clarkezone/go-microservice-starter:main
+            registry.hub.docker.com/clarkezone/go-microservice-starter:0.0.1
             #        image: registry.hub.docker.com/clarkezone/previewd:webhooke2e
           args: ["testservergrpc"]
           imagePullPolicy: Always

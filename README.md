@@ -14,9 +14,10 @@ Bootstrapping infra:
 
 - [x] update k8s files to point to correct image
 - [x] factor out middleware creation from grpcmiddleware into testgrpcserver
-- [ ] create 0.0.1 release
+- [x] create 0.0.1 release
 - [ ] Dashboard for telemetry verified with loadtester
 - [ ] update loadtester
+- [ ] fix linting
 - [ ] verify microservice mode locally and add commands to test to readme
 - [ ] k8s local override with staging / prod
 - [ ] Instructions for prerequs
