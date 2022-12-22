@@ -18,7 +18,8 @@ import (
 
 // TestServerGrpcCmd is the command to start a test grpc server
 type TestServerGrpcCmd struct {
-	bs *basicserver.BasicServerGrpc
+	bs  *basicserver.BasicServerGrpc
+	mid *basicserver.PromMetricsMiddlewareGrpc
 }
 
 func newTestServerGrpcCmd(partent *cobra.Command) (*TestServerGrpcCmd, error) {
@@ -39,9 +40,9 @@ to quickly create a Cobra application.`,
 			clarkezoneLog.Successf("gomicroservicestarter version %v,%v started in testservergrpc mode\n",
 				config.VersionString, config.VersionHash)
 			clarkezoneLog.Successf("Log level set to %v", internal.LogLevel)
-			// wrappedmux = basicserver.NewLoggingMiddleware(mux)
-			// wrappedmux = basicserver.NewPromMetricsMiddleware("gomicroservicestarter_testGrpcservice", wrappedmux)
 
+			tsGrpc.mid = basicserver.NewPromMetricsMiddlewareGrpc("gomicroservicestarterer_grpc")
+			bsGrpc.AddUnaryInterceptor(tsGrpc.mid.MetricsUnaryInterceptor)
 			clarkezoneLog.Successf("Starting grpc server on port %v", internal.Port)
 			bsGrpc.StartMetrics()
 			clarkezoneLog.Successf("Starting metrics on port %v", internal.MetricsPort)
