@@ -3,6 +3,8 @@
 # IDEs
 .vscode
 
+*.swp
+
 # Golang binary
 cli
 .syncthing*
