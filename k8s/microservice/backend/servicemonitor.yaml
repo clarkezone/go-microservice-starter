@@ -1,17 +1,17 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: gomicroservicestarter-servicemonitor-fe
+  name: gomicroservicestarter-servicemonitor-be
   namespace: monitoring
   labels:
-    name: gomicroservicestarter-servicemonitor-fe
+    name: gomicroservicestarter-servicemonitor-be
 spec:
   selector:
     #    matchLabels:
     #      app: gomicroservicestarter-fe
     matchExpressions:
-      - {key: app, operator: In, values: [gomicroservicestarter-fe]}
-      #      - {key: app, operator: In, values: [gomicroservicestarter-fe,gomicroservicestarter-be]}
+      - {key: app, operator: In, values: [gomicroservicestarter-be]}
+        #      - {key: app, operator: In, values: [gomicroservicestarter-fe, gomicroservicestarter-be]}
   namespaceSelector:
     matchNames:
       - go-microservice-starter
