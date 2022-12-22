@@ -12,23 +12,23 @@
 
 Bootstrapping infra:
 
-- [ ] Add load tester
-- [ ] Dashboard for telemetry
-- [ ] Hello world comes from microservice with switch / env for mode in single binary
-- [ ] Cleanup names
-- [ ] Fix double counting of metrics
+- [ ] verify microservice mode locally and add commands to test to readme
+- [ ] create 0.0.1 release
+- [ ] update k8s files to point to correct image
+- [ ] update loadtester
+- [ ] Dashboard for telemetry verified with loadtester
 - [ ] k8s local override with staging / prod
 - [ ] Instructions for prerequs
-- [ ] Fork and make template (rename target to be new baseline)
 - [ ] Turn on PR enforcement, protect main branch
 
 Template backlog
 
+- factor out common concerns
 - Add k8s manifest scanner for best practices (PDB, CPU/MEM requests and limits)
 - Add DT
 - Add vscode devcontaienr
 - complete openssf best practices
-- Add minimal viable covernance
+- Add minimal viable governance
 
 # Creating a new release
 
