@@ -26,17 +26,17 @@ COPY . .
 RUN make build HEAD_TAG="$BUILD_HEADTAG" VERSION_HASH="$BUILD_HASH" BRANCH_NAME="$BUILD_BRANCH"
 
 # test that that the build is good and app launches
-RUN /build/bin/pocketshorten version
+RUN /build/bin/go-microservice-starter version
 
 #RUN go test -v
 
 # generate clean, final image for end users
 FROM alpine:3.16
 RUN apk update
-COPY --from=builder /build/bin/pocketshorten .
+COPY --from=builder /build/bin/go-microservice-starter .
 
 # executable
-ENTRYPOINT [ "./pocketshorten" ]
+ENTRYPOINT [ "./go-microservice-starter" ]
 CMD ["testserver"]
 # arguments that can be override
 #CMD [ "3", "300" ]
