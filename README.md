@@ -13,6 +13,7 @@
 Bootstrapping infra:
 
 - [x] update k8s files to point to correct image
+- [x] factor out middleware creation from grpcmiddleware into testgrpcserver
 - [ ] create 0.0.1 release
 - [ ] Dashboard for telemetry verified with loadtester
 - [ ] update loadtester

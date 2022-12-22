@@ -10,7 +10,7 @@ spec:
     #    matchLabels:
     #      app: gomicroservicestarter-fe
     matchExpressions:
-      - {key: app, operator: In, values: [gomicroservicestarter-be]}
+      - { key: app, operator: In, values: [gomicroservicestarter-be] }
         #      - {key: app, operator: In, values: [gomicroservicestarter-fe, gomicroservicestarter-be]}
   namespaceSelector:
     matchNames:

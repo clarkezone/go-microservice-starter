@@ -34,7 +34,8 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: config-frontend
-                  key: SERVICEURL
+                  key:
+                    SERVICEURL
                     #            - name: POCKET_SHORTEN_USERNAME
                     #              valueFrom:
                     #                secretKeyRef:
